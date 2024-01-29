@@ -1,0 +1,791 @@
+*{
+    padding:0;
+    margin:0;
+    overflow-x:hidden;
+}
+:root{
+    --blueText:#044364;
+    --greenText:#265726;
+    --bgWhiteF7:#f7f7f7;
+    --faintWhite:#cdcdcd;
+    --green1:#159947;
+    --green2:#33ab5f;
+    --green3:#dff5ce;
+    --fontBlack:#00000080;
+    --blackFaded:#010101;
+
+
+    --fontUI:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fontPoppins:"Poppins",Sans-serif;
+    --fontTrebu:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width:375px) {
+nav{
+    width:100%;
+    display: flex;
+    z-index: 30;
+    flex-direction: column;
+    background-color: white;
+    left:-100%;
+    position: absolute;
+}
+nav .jobTitle{
+font:700 18px var(--fontTrebu);
+color:var(--green2);
+margin-left:.5em;
+display: flex;
+text-transform: capitalize;
+margin-top:-3em;
+flex-direction: column;
+}
+.jobTitle:nth-child(1){
+    margin-top:2em
+}
+#officeValues,#manualValues{
+    display: flex;
+    width:50%;
+    font:500 15px var(--fontPoppins);
+    left:-100%;
+    z-index:20000;
+    position: relative;
+    flex-direction: column;
+}
+#manualValues.active{
+    left:30%;}
+#officeValues span,#manualValues span{
+border-bottom:1px solid var(--fontBlack);
+width:100%;
+font:500 15px var(--fontPoppins);
+text-transform: capitalize;
+}
+#hamburgerContainer{
+    width:30px;
+    height:25px;
+    position: absolute;
+    top:3px ;
+    padding:5px 0px 0;
+    z-index: 30;
+    left:2px;
+    display: flex;
+    flex-direction: column;
+    row-gap:3px;
+    }
+    .navigation.active{
+        top:0;
+        -webkit-transition: all .6s ease-in-out;
+        transition: all .6s ease-in-out;
+    }
+    #hamburgerContainer.active{
+       
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        z-index: 40;
+    }
+    #labelcon.active,
+    #ConPassword.active
+    {
+        display: none;
+    }
+    #hamburgerContainer.active .bars{
+        width:70%;
+        border-radius: 7px;
+    }
+    #hamburgerContainer.active  .bars:nth-child(1){
+        transform: translateY(3px) rotate(45deg);
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    #hamburgerContainer.active  .bars:nth-child(2){
+    display: none;
+    }
+    #hamburgerContainer.active  .bars:nth-child(3){
+    transform: translateY(-4px) rotate(-45deg) ;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
+    }
+    #hamburgerContainer span{
+        width:100%;
+        background-color: var(--greenText);
+        position:relative;
+        justify-content: center;
+        padding:2px 0 2px;
+        border-radius: 7px;
+    }
+    .navigation.active{
+        left:0;
+    }
+    #Search{
+        top:20px;
+        left:27%;
+        padding:5px 5px 5px;
+        border-radius: 10px;bordeR:none;
+        outline:1px solid var(--fontBlack);
+        position: absolute;
+    }
+    #Search::placeholder{
+        lefT:10px;
+        position: relative;
+    }
+    .profileSection{
+        width:100%;
+        bordeR:1px solid red;
+        min-height: auto;
+        row-gap:30px;
+        display: grid;
+        grid-template-columns:repeat(1,1fr);
+       
+    }
+    .personalProfile{
+        width:80%;
+        height:70%;
+        padding:10px 10px 40px;
+        bordeR:1px solid hsl(0, 3%, 11% ,0.914);
+        top:30%;
+        lefT:7%;
+        position: relative;
+    }
+    .personalProfile .profile_img{
+        width:30%;
+        border-radius: 100%;
+        aspect-ratio: 3/3;
+
+    }
+}
+
+
+
+
+ 
+@media only screen and (min-width:768px){
+    nav{
+        width:30%;
+        display: flex;
+        z-index: 30;
+        flex-direction: column;
+        left:-100%;
+        top:0;
+        background-color: var(--bgWhiteF7);
+        padding-left:10px;
+        padding-top:30px;
+        height:100%;
+        position: absolute;
+    }
+    .navigation.active{
+        left:0;
+    }
+    nav .jobTitle{
+    font:700 25px var(--fontTrebu);
+    color:var(--green2);
+    margin-left:.5em;
+    display: flex;
+    text-transform: capitalize;
+    flex-direction: column;
+    margin-bottom: 2px;
+    
+    }
+    .jobTitle:nth-child(1){
+        margin-top:1em
+    }
+   
+    .jobsCategory{
+       margin-left:15px;
+       margin-bottom: 20px;
+       display: flex;
+       width:50%;
+       left:00%;
+       position: relative;
+       flex-direction: column;
+    }
+    
+    .jobsCategory span{
+        overflow: hidden; 
+        row-gap: 15px;
+        font:600 18px var(--fontUI);
+        letter-spacing: .7px;;
+        color:var(--blackFaded);
+        text-transform: capitalize;
+    }
+ 
+    #hamburgerContainer{
+        width:30px;
+        height:25px;
+        position: absolute;
+        top:10px ;
+        padding:5px 0px 0;
+        z-index: 30;
+        left:12px;
+        display: flex;
+        flex-direction: column;
+        row-gap:3px;
+        }
+       
+        #hamburgerContainer.active{
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            z-index: 40;
+        }
+        #labelcon.active,
+        #ConPassword.active
+        {
+            display: none;
+        }
+        #hamburgerContainer.active .bars{
+            width:70%;
+            border-radius: 7px;
+        }
+        #hamburgerContainer.active  .bars:nth-child(1){
+            transform: translateY(3px) rotate(45deg);
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+        #hamburgerContainer.active  .bars:nth-child(2){
+        display: none;
+        }
+        #hamburgerContainer.active  .bars:nth-child(3){
+        transform: translateY(-4px) rotate(-45deg) ;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .4s ease-in-out;
+        }
+        #hamburgerContainer span{
+            width:100%;
+            background-color: var(--greenText);
+            position:relative;
+            justify-content: center;
+            padding:2px 0 2px;
+            border-radius: 7px;
+        }
+        #Search{
+            top:120px;
+            left:10%;
+            padding:10px 5px 5px 20px;
+            outline:none;
+            bordeR:none;
+            width:300px;
+            bordeR-bottom:1px solid var(--fontBlack);
+            position: absolute;
+        }
+        #Search::placeholder{
+            lefT:10px;
+            font:400 18px var(--fontUI);
+            position: relative;
+        }
+        #Search:focus{
+            background-color: var(--greenFade);
+            transition: .3s ease-in-out;
+        }
+
+        .mainProfile{
+            width:100%;
+            top:10%;
+            height:100%;
+            margin:10px 0 0 ;
+            padding:30px 40px 60px;
+            position:relative;
+            overflow: hidden;
+            ;
+        }
+        .main_img{
+            width:100%;
+            height:40%;
+            top:15%;
+            padding:10px;
+            background: var(--greenFade);
+            position: relative;
+            
+            overflow: hidden;
+        }
+        .main_img .img_profile{
+            width:60%;
+            object-fit: contain;
+            left:2.9em;
+            top:.0em;
+            position: relative;
+        }
+        .personInfo{
+            width: 100%;
+            top:17%;position:relative;
+            display: flex;
+            flex-direction: column;
+        
+        }
+        .personInfo div{
+            display: flex;
+            margin:0 0 .5em;
+            ;
+        }
+         .personInfo div span{
+            font:900 15px var(--fontUI);
+            color:var(--fontBlack);
+            padding:0 10px 0 ;
+            text-transform: capitalize;
+         }
+        .personInfo .exp h1{
+            font:800 22px var(--fontUI);
+            line-height: 20px;
+            letter-spacing: 1px;
+            overflow: hidden;
+            padding:0 12px 10px;
+            text-transform: capitalize;
+        }
+        .personInfo h2{
+            font:900 18px var(--fontUI);
+            color:rgba(0, 0, 0, 0.88);
+            padding:0 8px 0
+        }
+        .personInfo h3{
+            font:600 14px var(--fontPoppins);
+            padding:0 15px 0;
+            text-transform: capitalize;
+        }
+        .workDone{
+        width:100%;
+        margin-top: 1em;
+        padding:10px 0 10px;
+        background: var(--faintWhite);
+        bordeR:1px solid #00000025;
+        display:grid;
+        grid-template-columns: repeat(3,.1fr);
+        grid-column-gap: 20px;
+        }
+        .workDone img{
+            width:75%;
+        }
+        .reviews h1{
+            position: relative;
+            left:70%;
+            font:300 18px var(--fontUI);
+            text-transform: capitalize;
+            text-decoration: underline;
+            color:var(--green1)
+        }
+        .hireMe{
+            padding:9px 10px 9px;
+            background: var(--green1);
+            border:none;
+            color:var(--faintWhite);
+            font:500 10px var(--fontUI);
+            border-radius: 7px;
+            margin-lefT:3em;
+            width:150px;
+            text-transform: capitalize;
+            transition: .3s ;
+        }
+        .hireMe:hover{
+            box-shadow: inset 10em 10px 0 0 var(--bgWhiteF7);
+            color:var(--fontBlack)
+        }
+        .profileSection{
+            width:100%;
+            min-height: auto;
+            row-gap:30px;
+            display: grid;
+            grid-template-columns:repeat(1,1fr);
+           
+        }
+        .personalProfile{
+            width:80%;
+            height:70%;
+            padding:10px 10px 40px;
+            bordeR:1px solid hsl(0, 3%, 11% ,0.914);
+            top:30%;
+            lefT:7%;
+            position: relative;
+        }
+        .personalProfile .profile_img{
+            width:30%;
+            border-radius: 100%;
+            aspect-ratio: 3/3;
+    
+        }
+        #mainBody{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            overflow:hidden;
+            width:100%;
+            position:absolute;
+            grid-gap: 50px;
+            height:auto;
+            padding:80px 20px 70px 20px;
+            right:0;
+        }
+   
+}
+
+
+
+
+
+@media only screen and (min-width:1300px){
+    
+:root{
+    --green1:#159947;
+    --green2:#33ab5f;
+    --fontUI:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fontPoppins:"Poppins",Sans-serif;
+    --fontTrebu:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#earnWithBizzy{
+    width:100%;
+    position: absolute;
+    top:50%;
+    lefT:0;
+    border:1px solid red;
+    height:auto;
+    padding:50px 0 40px;
+    display: flex;
+}
+.main{
+    width:80%;
+    border:1px solid blue;
+    height:auto;
+    position:relative;
+    margin-top:10%;
+    padding:40px 10px 40px;
+    display: flex;
+    left:10%;
+
+}
+.main img{
+    width:220px;
+    height:250px;
+    ;
+}
+.advices{
+    padding:10px 0 20px;
+    margin:.5em 0 0 6em
+
+}
+.adv{
+    display: flex;
+    margin:.5em 0 .3em ;
+    padding:4px 0 4px;
+  
+
+}
+.adv span{
+font:500 18px var(--fontUI);
+color:#000;
+background:var(--green1);
+padding:1px 0px 1px;
+text-align: center;
+height:30px;
+width:30px;
+border-radius: 100%;
+margin:0 .4em 0;
+color:#FFFf
+;
+
+
+}
+.adv h1{
+    font:400 17px var(--fontUI);
+    color: #000500;
+}
+.engineer,.tech{
+    display:none;
+
+}
+.engineer.active{
+    display:flex
+    ;
+}
+.plumber.active{
+    display: none;
+}
+nav{
+    padding:10px 0 10px;
+    margin:0 0 3em;
+    display: flex;
+    position: absolute;
+    lefT:20%;
+
+    ;
+
+}
+nav .occ{
+    padding:5px 10px 5px;
+    background: var(--green2);
+    border:none;
+    font:400 17px var(--fontUI);
+    margin:10px 10px 10px;
+
+
+}
+.title{
+    font:500 18px var(--fontUI);
+    position:absolute;
+    top:0;
+}
+.occ:hover{
+background-color: #ffff;
+border:1px solid var(--green2);
+}
+    nav{
+        width:30%;
+        display: flex;
+        z-index: 30;
+        flex-direction: column;
+        left:0%;
+        top:0;
+        background-color: var(--bgWhiteF7);
+        padding-left:10px;
+        padding-top:30px;
+        height:100%;
+        position: absolute;
+    }
+   
+    nav .jobTitle{
+    font:700 25px var(--fontTrebu);
+    color:var(--green2);
+    margin-left:.5em;
+    display: flex;
+    text-transform: capitalize;
+    flex-direction: column;
+    margin-bottom: 2px;
+    
+    }
+    .jobTitle:nth-child(1){
+        margin-top:1em
+    }
+   
+    .jobsCategory{
+       margin-left:15px;
+       margin-bottom: 20px;
+       display: flex;
+       width:50%;
+       left:00%;
+       position: relative;
+       flex-direction: column;
+    }
+    
+    .jobsCategory span{
+        overflow: hidden; 
+        row-gap: 15px;
+        font:600 18px var(--fontUI);
+        letter-spacing: .7px;;
+        color:var(--blackFaded);
+        text-transform: capitalize;
+    }
+ 
+    #hamburgerContainer{
+        width:30px;
+        height:25px;
+        position: absolute;
+        top:10px ;
+        padding:5px 0px 0;
+        z-index: 30;
+        left:12px;
+        display: none;
+        flex-direction: column;
+        row-gap:3px;
+        }
+       
+        #hamburgerContainer.active{
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            z-index: 40;
+        }
+        #labelcon.active,
+        #ConPassword.active
+        {
+            display: none;
+        }
+        #hamburgerContainer.active .bars{
+            width:70%;
+            border-radius: 7px;
+        }
+        #hamburgerContainer.active  .bars:nth-child(1){
+            transform: translateY(3px) rotate(45deg);
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+        #hamburgerContainer.active  .bars:nth-child(2){
+        display: none;
+        }
+        #hamburgerContainer.active  .bars:nth-child(3){
+        transform: translateY(-4px) rotate(-45deg) ;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .4s ease-in-out;
+        }
+        #hamburgerContainer span{
+            width:100%;
+            background-color: var(--greenText);
+            position:relative;
+            justify-content: center;
+            padding:2px 0 2px;
+            border-radius: 7px;
+        }
+        #Search{
+            top:120px;
+            left:10%;
+            padding:10px 5px 5px 20px;
+            outline:none;
+            bordeR:none;
+            width:300px;
+            bordeR-bottom:1px solid var(--fontBlack);
+            position: absolute;
+        }
+        #Search::placeholder{
+            lefT:10px;
+            font:400 18px var(--fontUI);
+            position: relative;
+        }
+        #Search:focus{
+            background-color: var(--greenFade);
+            transition: .3s ease-in-out;
+        }
+
+        .mainProfile{
+            width:100%;
+            top:1%;
+            height:100%;
+            margin:10px 0 0 ;
+            padding:30px 40px 60px;
+            position:relative;
+            overflow: hidden;
+            ;
+        }
+        .main_img{
+            width:100%;
+            height:40%;
+            top:15%;
+            padding:10px;
+            background: var(--greenFade);
+            position: relative;
+            
+            overflow: hidden;
+        }
+        .main_img .img_profile{
+            width:60%;
+            object-fit: contain;
+            left:2.9em;
+            top:.0em;
+            position: relative;
+        }
+        .personInfo{
+            width: 100%;
+            top:17%;position:relative;
+            display: flex;
+            flex-direction: column;
+        
+        }
+        .personInfo div{
+            display: flex;
+            margin:0 0 .5em;
+            ;
+        }
+         .personInfo div span{
+            font:900 15px var(--fontUI);
+            color:var(--fontBlack);
+            padding:0 10px 0 ;
+            text-transform: capitalize;
+         }
+        .personInfo .exp h1{
+            font:800 20px var(--fontUI);
+            line-height: 20px;
+            letter-spacing: 1px;
+            overflow: hidden;
+            padding:0 12px 10px;
+            text-transform: capitalize;
+        }
+        .personInfo h2{
+            font:900 18px var(--fontUI);
+            color:rgba(0, 0, 0, 0.88);
+            padding:0 8px 0
+        }
+        .personInfo h3{
+            font:600 14px var(--fontPoppins);
+            padding:0 15px 0;
+            text-transform: capitalize;
+        }
+        .workDone{
+        width:100%;
+        margin-top: 1em;
+        padding:10px 0 10px;
+        background: var(--faintWhite);
+        bordeR:1px solid #00000025;
+        display:grid;
+        grid-template-columns: repeat(3,.1fr);
+        grid-column-gap: 20px;
+        }
+        .workDone img{
+            width:75%;
+        }
+        .reviews h1{
+            position: relative;
+            left:70%;
+            font:300 18px var(--fontUI);
+            text-transform: capitalize;
+            text-decoration: underline;
+            color:var(--green1)
+        }
+        .hireMe{
+            padding:9px 10px 9px;
+            background: var(--green1);
+            border:none;
+            color:var(--faintWhite);
+            font:500 15px var(--fontUI);
+            border-radius: 7px;
+            margin-lefT:3em;
+            width:150px;
+            text-transform: capitalize;
+            transition: .3s ;
+        }
+        .hireMe:hover{
+            box-shadow: inset 10em 10px 0 0 var(--bgWhiteF7);
+            color:var(--fontBlack)
+        }
+        .profileSection{
+            width:100%;
+            min-height: auto;
+            row-gap:30px;
+            display: grid;
+            grid-template-columns:repeat(1,1fr);
+           
+        }
+        .personalProfile{
+            width:80%;
+            height:70%;
+            padding:10px 10px 40px;
+            bordeR:1px solid hsl(0, 3%, 11% ,0.914);
+            top:30%;
+            lefT:7%;
+            position: relative;
+        }
+        .personalProfile .profile_img{
+            width:30%;
+            border-radius: 100%;
+            aspect-ratio: 3/3;
+    
+        }
+        #mainBody{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            overflow:hidden;
+            width:85%;
+            position:absolute;
+            grid-gap: 50px;
+            height:auto;
+            top:0;
+            z-index: 200;
+            padding:20px 20px 70px 20px;
+            right:0;
+        }
+        #bizzyLogo{
+            position:absolute;
+            top:-5%;
+            lefT:40%;
+            justify-content: center;
+            align-items: center;
+            padding:10px 0 20px;
+            z-index: 2000;;;
+        }
+        #bizzyLogo img{
+            width:50%;
+            aspect-ratio: 3/1.9;
+            top:0;
+            ;
+        }
+   
+}

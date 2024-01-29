@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body onload="onloadExe()">
+
+    <div id="visitorSelect"> 
+        <h1>Join as a freeLancer or a client</h1>
+        <div id="Client" ><h3 class="h3">I am a client looking to hire </h3><span class="check">.</span> </div>
+        <div id="freeLancer"><h3>I am freeLancer looking for Work </h3><span class="check">.</span></div>
+        <button id="hire_Free" onclick="onloadClient()">Register</button>
+
+        <div id="accountQuery"><h5>have an account?</h5><h4 id="LoginLink" onclick="LoginPage()">login</h4></div>
+</div>
+    
+    <form id="form">
+        <h1 id="formText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, labore.</h1>
+<label for="Firstname" class="labelAll">First Name</label>
+<input type="text" placeholder="  First Name" class="input">
+<span class="ErrorSpan"></span><br>
+
+<label for="lastname"  class="labelAll">Last Name</label>
+<input type="text" placeholder="   Last Name" class="input">
+<span class="ErrorSpan"></span><br>
+
+<label for="email"  class="labelAll">Email</label>
+<input type="email" id="email" placeholder=" Your Email" class="input">
+<span class="ErrorSpan"></span><br>
+
+<label for="Password"  class="labelAll">Password</label>
+<input type="password" placeholder="  Password" class="input">
+<span class="ErrorSpan"></span><br>
+
+<label for="ConPassword"  class="labelAll" id="labelcon">Confirm Password</label>
+<input type="password" placeholder="  Confirm Password" class="input" id="ConPassword">
+<span class="ErrorSpan"></span>
+<br>
+<select id="Select" >
+    <option value="">Occupation</option>
+    <option value="">Manual Jobs</option>
+    <option value="">Office Jobs</option>
+    <option value="">Medics/Vets</option>
+</select>
+
+<button id="Register" type="button">Register</button>
+    </form>
+</body>
+<script src="form.js"></script>
+</html>

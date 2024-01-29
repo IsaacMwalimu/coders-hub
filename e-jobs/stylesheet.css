@@ -1,0 +1,167 @@
+*{
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
+    white-space: none;
+    box-sizing: border-box;
+}
+:root{
+    --blueText:#044364;
+    --greenText:#265726;
+    --bgWhiteF7:#f7f7f7;
+    --faintWhite:#cdcdcd;
+    --green1:#159947;
+    --green2:#33ab5f;
+    --green3:#dff5ce;
+    --greenFade:#33ab5f50;
+    --fontBlack:#000000bf;
+    --fontUI:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fontPoppins:"Poppins",Sans-serif;
+    --fontTrebu:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media only screen and (max-width:375px) {
+  
+    #logo{
+  width:100%;
+        position: absolute;
+        top:0;
+    }  
+    #logo img{
+      width: 50%;
+        aspect-ratio: 3/1.8;
+        left:20%;
+        position: relative;
+        top:-20px;
+        ;
+    } 
+    #arrowHome{
+        width:8%;
+        transform: rotate(180deg);
+        position: absolute;
+        top:20px;
+        lefT:5px;
+        ;z-index: 40;
+
+    }
+    .mainProfile{
+    width:100%;
+    top:100%;
+    height:100%;
+    margin:150px 0 0 ;
+    position:relative;
+}
+.main_img{
+    width:100%;
+    height:40%;
+    top:15%;
+    padding:10px;
+    background: var(--greenFade);
+    position: relative;
+}
+.main_img .img_profile{
+    width:60%;
+    object-fit: contain;
+    left:2.9em;
+    top:.0em;
+    position: relative;
+}
+.personInfo{
+    width: 100%;
+    top:17%;position:relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.personInfo div{
+    display: flex;
+    margin:0 0 .5em;
+    ;
+}
+ .personInfo div span{
+    font:900 15px var(--fontUI);
+    color:var(--fontBlack);
+    text-transform: capitalize;
+ }
+.personInfo .exp h1{
+    font:800 22px var(--fontUI);
+    line-height: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    padding:0 12px 10px;
+    text-transform: capitalize;
+}
+.personInfo h2{
+    font:900 18px var(--fontUI);
+    color:rgba(0, 0, 0, 0.88);
+    padding:0 8px 0
+}
+.personInfo h3{
+    font:600 14px var(--fontPoppins);
+    padding:0 15px 0;
+    text-transform: capitalize;
+}
+.workDone{
+width:100%;
+margin-top: 1em;
+padding:10px 0 10px;
+background: var(--faintWhite);
+bordeR:1px solid #00000025;
+display:grid;
+grid-template-columns: repeat(3,.1fr);
+grid-column-gap: 20px;
+}
+.workDone img{
+    width:75%;
+}
+.reviews{
+    
+
+}
+.reviews h1{
+    position: relative;
+    left:70%;
+    font:300 18px var(--fontUI);
+    text-transform: capitalize;
+    text-decoration: underline;
+    color:var(--green1)
+}
+.hireMe{
+    padding:9px 17px 9px;
+    background: var(--green1);
+    border:none;
+    color:var(--faintWhite);
+    font:500 15px var(--fontUI);
+    border-radius: 7px;
+    margin-lefT:3em;
+
+
+}
+}
+
+
+@media only screen and (min-width:768px) {
+  
+    #logo{
+  width:100%;
+        position: absolute;
+        top:0;
+    }  
+    #logo img{
+      width: 50%;
+        aspect-ratio: 3/1.8;
+        left:20%;
+        position: relative;
+        top:-20px;
+        ;
+    } 
+    #arrowHome{
+        width:8%;
+        transform: rotate(180deg);
+        position: absolute;
+        top:20px;
+        lefT:5px;
+        ;z-index: 40;
+
+    }
+
+}
